@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Nairi() {
   return (
-    <div>Nairi</div>
+    <div>HI this is my page</div>
   )
 }
