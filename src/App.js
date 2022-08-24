@@ -4,7 +4,7 @@ import Menu from './components/Menu'
 import Henrik from './pages/Henrik/Henrik'
 import Nairi from './pages/Nairi/Nairi'
 import Narek from './pages/Narek/Narek'
-import Armine from './pages/Armine/Armine'
+import Armine from './pages/Armine'
 import Nelly from './pages/Nelly/Nelly'
 
 function App() {
