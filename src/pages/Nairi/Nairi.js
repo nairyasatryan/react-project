@@ -1,7 +1,9 @@
 import React from 'react'
-
+import CrudTable from './CrudTable'
 export default function Nairi() {
   return (
-    <div>HI this is my page</div>
+    <div>
+        <CrudTable />
+    </div>
   )
 }
