@@ -7,8 +7,12 @@ import Narek from './pages/Narek/Narek'
 import Armine from './pages/Armine/Armine'
 import Nelly from './pages/Nelly/Nelly'
 
+
+
 function App() {
   return (
+    
+      
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Login />} />
@@ -20,6 +24,7 @@ function App() {
         <Route path='/nelly' element={<Nelly />} />
       </Routes>
     </BrowserRouter>
+    
     
 
   );
