@@ -1,30 +1,30 @@
 [
     {
-        "path":"/henrik",
+        "path": "/henrik",
         "img": "assets/lasvegas.jpg",
         "title": "Հենրիկ Հայրապետյան",
         "description": "hhhhhhhjk"
     },
     {
-        "path":"/nelly",
+        "path": "/nelly",
         "img": "./assets/lasvegas.jpg",
         "title": "Նելլի Բաղդասարյան",
         "description": "hhhhhhhjk"
     },
     {
-        "path":"/nairi",
+        "path": "/nairi",
         "img": "./assets/lasvegas.jpg",
         "title": "Նաիրի Ասատրյան",
         "description": "hhhhhhhjk"
     },
     {
-        "path":"/narek",
+        "path": "/narek",
         "img": "./assets/lasvegas.jpg",
         "title": "Նարեկ Մանուկյան",
         "description": "hhhhhhhjk"
     },
     {
-        "path":"/armine",
+        "path": "/armine",
         "img": "./assets/lasvegas.jpg",
         "title": "Արմինե Դեմիրչյան",
         "description": "hhhhhhhjk"

@@ -20,8 +20,6 @@ function App() {
         <Route path='/nelly' element={<Nelly />} />
       </Routes>
     </BrowserRouter>
-    
-
   );
 }
 
