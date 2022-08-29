@@ -10,12 +10,12 @@ body{
     padding: 1rem;
   }
   
-  table {
+  .table {
     border-collapse: collapse;
     width: 100%;
   }
   
-  th,
+  .table_high,
   td {
     border: 1px solid #ffffff;
     text-align: left;
@@ -23,7 +23,7 @@ body{
     font-size: 32px;
   }
   
-  th {
+  .table_high {
     background-color: rgb(117, 201, 250);
   }
   
