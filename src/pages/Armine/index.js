@@ -1,10 +1,10 @@
 import React from 'react'
-import MaterialTable from 'material-table'
+import NavBar from './components/NavBar.js'
 
 export default function Armine() {
   return (
     <div>
-      <MaterialTable/>
+      <NavBar/>  
     </div>
   )
 }
