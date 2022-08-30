@@ -8,6 +8,7 @@ import Armine from './pages/Armine'
 import Nelly from './pages/Nelly/Nelly'
 import AllUser from './pages/Armine/components/AllUser'
 import AddUser from './pages/Armine/components/AddUser'
+import EditUser from './pages/Armine/components/EditUser'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/armine' element={<Armine/> } />
         <Route path='/armine/all' element={<AllUser/>} />
         <Route path='/armine/add' element={<AddUser/>} />
+        <Route path='/armine/edit' element={<EditUser/>} />
         <Route path='/nelly' element={<Nelly />} />
         
       </Routes>
