@@ -18,7 +18,7 @@
   }
   
   .table_high,
-  td {
+  .myTd {
     border: 1px solid #ffffff;
     text-align: left;
     padding: 8px;
@@ -29,7 +29,7 @@
     background-color: rgb(117, 201, 250);
   }
   
-  td {
+ .myTd {
     background-color: rgb(205, 235, 253);
   }
   
