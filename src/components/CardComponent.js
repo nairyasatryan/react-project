@@ -3,7 +3,6 @@ import "./CardComponent.css"
 
 
 function CardComponent(props) {
-   
 
     return (
         <div className="card card1">
@@ -15,8 +14,8 @@ function CardComponent(props) {
                 <p>{props.description}</p>
             </div>
         </div>
-
     )
+
 }
 
 export default CardComponent

@@ -22,10 +22,9 @@ function App() {
         <Route path='/armine/all' element={<AllUser/>} />
         <Route path='/armine/add' element={<AddUser/>} />
         <Route path='/nelly' element={<Nelly />} />
+        
       </Routes>
     </BrowserRouter>
-    
-
   );
 }
 
