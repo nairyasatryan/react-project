@@ -7,7 +7,7 @@ const EditableRow = ({
 }) => {
   return (
     <tr>
-      <td>
+      <td className="myTd">
         <input
           type="text"
           required="required"
@@ -16,8 +16,8 @@ const EditableRow = ({
           value={editFormData.author}
           onChange={handleEditFormChange}
         ></input>
-      </td>
-      <td>
+      </td >
+      <td className="myTd">
         <input
           type="text"
           required="required"
@@ -27,7 +27,7 @@ const EditableRow = ({
           onChange={handleEditFormChange}
         ></input>
       </td>
-      <td>
+      <td className="myTd">
         <input
           type="text"
           required="required"
@@ -37,7 +37,7 @@ const EditableRow = ({
           onChange={handleEditFormChange}
         ></input>
       </td>
-      <td>
+      <td className="myTd">
         <input
           type="text"
           required="required"
@@ -47,7 +47,7 @@ const EditableRow = ({
           onChange={handleEditFormChange}
         ></input>
       </td>
-      <td>
+      <td className="myTd">
         <button type="submit">Save</button>
         <button type="button" onClick={handleCancelClick}>
           Cancel
