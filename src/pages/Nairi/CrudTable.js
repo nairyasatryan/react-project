@@ -114,6 +114,7 @@ const CrudTable = () => {
   };
 
   return (
+    <section className="my_body">
     <div className="app-container">
       <form onSubmit={handleEditFormSubmit}>
         <table className="table">
@@ -149,7 +150,7 @@ const CrudTable = () => {
       </form>
 
       
-      <form onSubmit={handleAddFormSubmit}>
+      <form  className="myForm"  onSubmit={handleAddFormSubmit}>
         <input
           type="text"
           name="author"
@@ -181,6 +182,7 @@ const CrudTable = () => {
         <button type="submit">Add</button>
       </form>
     </div>
+    </section>
   );
 };
 
