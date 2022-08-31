@@ -1,6 +1,7 @@
-import { Component, useEffect, useState } from "react";
-import { Table, TableHead, TableRow, TableCell, TableBody, styled, Button} from '@mui/material';
-import {Link} from "react-router-dom";
+import { useState } from "react";
+import { Table, TableHead, TableRow, TableCell, TableBody, styled, Button } from '@mui/material';
+import { Link } from "react-router-dom";
+import data from "../data.json";
 import React from 'react';
 
 
@@ -23,16 +24,7 @@ const TBody = styled(TableRow)`
 `
 const AllUser = () => {
 
-  // const [users, setUsers] = useState([]);
-  // useEffect(() => {
-  //   getUsersDetalis();
-  // }, [])
-
-  // const getUsersDetalis = async () => {
-  //   let response = await getUsers();
-  //   console.log(response);
-  //   setUsers(response.data);
-  // }
+  const [users, setUsers] = useState(data)
   return (
     <StyledTable>
       <TableHead>
@@ -46,22 +38,30 @@ const AllUser = () => {
         </Thead>
       </TableHead>
       <TableBody>
+
+
         
-          
+          {
+            users.map((user) => (
             <TBody>
-              <TableCell>Armine</TableCell>
-              <TableCell>Demirchyan</TableCell>
-              <TableCell>145</TableCell>
-              <TableCell>58578</TableCell>
-              <TableCell>4</TableCell>
+              <TableCell>{user.id}</TableCell>
+              <TableCell>{user.name}</TableCell>
+              <TableCell>{user.username}</TableCell>
+              <TableCell>{user.email}</TableCell>
+              <TableCell>{user.phone}</TableCell>
               <TableCell>
-                <Button variant="contained" style={{marginRight:10}} component={Link} to="/armine/edit">Edit</Button>
-                <Button variant="contained" color="secondary">Delete</Button>
-              </TableCell>
-              
-            </TBody>
+            <Button variant="contained" style={{ marginRight: 10 }} component={Link} to="/armine/edit">Edit</Button>
+            <Button variant="contained" color="secondary">Delete</Button>
+          </TableCell>
+
+        </TBody>
+            ))
+          }
+
+
           
-        
+
+
       </TableBody>
     </StyledTable>
   )
