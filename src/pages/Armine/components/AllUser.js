@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Table, TableHead, TableRow, TableCell, TableBody, styled, Button } from '@mui/material';
 import { Link } from "react-router-dom";
-import data from "../data.json";
 import React from 'react';
+import Navbar from "./NavBar";
+import { getUsers, deleteUser} from "../service/api";
+
 
 
 const StyledTable = styled(Table)`
@@ -24,46 +26,63 @@ const TBody = styled(TableRow)`
 `
 const AllUser = () => {
 
-  const [users, setUsers] = useState(data)
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    getUserDetails();
+  }, [])
+
+  const getUserDetails = async () => {
+    let response = await getUsers();
+    console.log(response);
+    setUsers(response.data)
+  }
+
+  const deleteUserData = async (id) => {
+    await deleteUser(id);
+    getUserDetails();
+  }
+
   return (
-    <StyledTable>
-      <TableHead>
-        <Thead>
-          <TableCell>Id</TableCell>
-          <TableCell>Name</TableCell>
-          <TableCell>Username</TableCell>
-          <TableCell>Email</TableCell>
-          <TableCell>Phone</TableCell>
-          <TableCell></TableCell>
-        </Thead>
-      </TableHead>
-      <TableBody>
+    <>
+      <Navbar />
+      <StyledTable>
+        <TableHead>
+          <Thead>
+            <TableCell>Id</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>Username</TableCell>
+            <TableCell>Email</TableCell>
+            <TableCell>Phone</TableCell>
+            <TableCell></TableCell>
+            <TableCell></TableCell>
+          </Thead>
+        </TableHead>
+        <TableBody>
 
 
-        
+
           {
-            users.map((user) => (
-            <TBody>
-              <TableCell>{user.id}</TableCell>
-              <TableCell>{user.name}</TableCell>
-              <TableCell>{user.username}</TableCell>
-              <TableCell>{user.email}</TableCell>
-              <TableCell>{user.phone}</TableCell>
-              <TableCell>
-            <Button variant="contained" style={{ marginRight: 10 }} component={Link} to="/armine/edit">Edit</Button>
-            <Button variant="contained" color="secondary">Delete</Button>
-          </TableCell>
-
-        </TBody>
+            users.map((user,index) => (
+              <TBody key={index}>
+                <TableCell>{user.id}</TableCell>
+                <TableCell>{user.name}</TableCell>
+                <TableCell>{user.username}</TableCell>
+                <TableCell>{user.email}</TableCell>
+                <TableCell>{user.phone}</TableCell>
+                <TableCell><Button variant="contained" style={{ marginRight: 5 }} component={Link} to={`/armine/edit/${user.id}`}>Edit</Button></TableCell>
+                <TableCell><Button variant="contained" color="secondary" onClick={() => deleteUserData(user.id)}>Delete</Button></TableCell>
+              </TBody>
             ))
           }
 
 
-          
 
 
-      </TableBody>
-    </StyledTable>
+
+        </TableBody>
+      </StyledTable>
+    </>
   )
 }
 

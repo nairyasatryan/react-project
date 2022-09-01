@@ -10,11 +10,8 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "babel-plugin-macros": "^3.1.0",
-<<<<<<< HEAD
-=======
-    "nanoid": "^4.0.0",
     "bootstrap": "^5.2.0",
->>>>>>> 63911bed3f831f5bf780545240d3943ca5fdbaa8
+    "nanoid": "^4.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
@@ -25,10 +22,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "json-server":"json-server --watch src/database/db.json --port 3002",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "json-server -w src/database/db.json --port 3000 "
+    "eject": "react-scripts eject"
+    
   },
   "eslintConfig": {
     "extends": [

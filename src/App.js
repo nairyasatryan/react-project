@@ -22,7 +22,7 @@ function App() {
         <Route path='/armine' element={<Armine/> } />
         <Route path='/armine/all' element={<AllUser/>} />
         <Route path='/armine/add' element={<AddUser/>} />
-        <Route path='/armine/edit' element={<EditUser/>} />
+        <Route path='/armine/edit/:id' element={<EditUser/>} />
         <Route path='/nelly' element={<Nelly />} />
         
       </Routes>

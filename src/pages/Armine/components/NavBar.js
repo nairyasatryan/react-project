@@ -2,7 +2,13 @@ import {AppBar, Toolbar, styled} from '@mui/material';
 import {NavLink} from 'react-router-dom';
 
 const Header = styled(AppBar)`
-    background:#111111;
+     background: #000;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1000px) / 2);
+  z-index: 10;
+ 
 `
 const Tabs =styled(NavLink)`
     font-size:20px;
