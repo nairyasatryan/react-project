@@ -54,7 +54,7 @@ const cleanClick = () => setGameData(initialValues);
 const editClick = (data, index) =>{
   setGameData(data);
   setEditGameData({
-    Edit: false,
+    Edit: true,
     GameIndex: index
   })
 }
