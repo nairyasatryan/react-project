@@ -69,7 +69,7 @@ const editClick = (data, index) =>{
                     <th className='thStyle'>Hours</th>
                     <th className='thStyle'>Price</th>
                     <th className='thStyle'>Comments</th>
-                    <th className='thStyle'>Actions</th>
+                    <th className='thStyleActions'>Actions</th>
                
 
 
