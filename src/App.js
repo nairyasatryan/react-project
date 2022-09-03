@@ -22,12 +22,10 @@ function App() {
         <Route path='/narek' element={<Narek />} />
         <Route path='/armine' element={<Armine />} />
         <Route path='/nelly' element={<Nelly />} />
+        
       </Routes>
     </BrowserRouter>
-    
-    
-
-  );
+    );
 }
 
 export default App;
