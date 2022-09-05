@@ -1,32 +1,32 @@
 [
     {
         "path": "/henrik",
-        "img": "assets/lasvegas.jpg",
+        "img": "assets/foot.jpg",
         "title": "Հենրիկ Հայրապետյան",
-        "description": "hhhhhhhjk"
+        "description": "Management panel for football players"
     },
     {
         "path": "/nelly",
-        "img": "./assets/lasvegas.jpg",
+        "img": "./assets/nelly.jpg",
         "title": "Նելլի Բաղդասարյան",
-        "description": "hhhhhhhjk"
+        "description": "Top Famous Armenians"
     },
     {
         "path": "/nairi",
-        "img": "./assets/lasvegas.jpg",
+        "img": "./assets/books.jpg",
         "title": "Նաիրի Ասատրյան",
-        "description": "hhhhhhhjk"
+        "description": "Booklist for Book shop"
     },
     {
         "path": "/narek",
-        "img": "./assets/lasvegas.jpg",
+        "img": "./assets/306739.jpg",
         "title": "Նարեկ Մանուկյան",
-        "description": "hhhhhhhjk"
+        "description": "Game Catalog"
     },
     {
         "path": "/armine",
-        "img": "./assets/lasvegas.jpg",
+        "img": "./assets/armine.jpg",
         "title": "Արմինե Դեմիրչյան",
-        "description": "hhhhhhhjk"
+        "description": "Admin panel of a shopping site"
     }
 ]
