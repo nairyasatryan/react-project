@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import NareksCrud from './NareksCrud';
 
 export default function Narek() {
-  return (
-    <div>
-      <p>New Paragraph</p>
-    </div>
+  return(
+  <div>
+    <NareksCrud></NareksCrud>
+  
+  </div>
   )
 }
+
