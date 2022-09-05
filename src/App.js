@@ -10,8 +10,12 @@ import AllUser from './pages/Armine/components/AllUser'
 import AddUser from './pages/Armine/components/AddUser'
 import EditUser from './pages/Armine/components/EditUser'
 
+
+
 function App() {
   return (
+    
+      
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Login />} />
@@ -27,7 +31,7 @@ function App() {
         
       </Routes>
     </BrowserRouter>
-  );
+    );
 }
 
 export default App;
