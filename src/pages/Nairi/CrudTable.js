@@ -114,16 +114,17 @@ const CrudTable = () => {
   };
 
   return (
+    <section className="my_body">
     <div className="app-container">
       <form onSubmit={handleEditFormSubmit}>
-        <table>
+        <table className="table">
           <thead>
-            <tr>
-              <th>Author</th>
-              <th>Title</th>
-              <th>Languagr</th>
-              <th>Status</th>
-              <th>Actions</th>
+            <tr className="table_row">
+              <th className="table_high">Author</th>
+              <th className="table_high">Title</th>
+              <th className="table_high">Languagr</th>
+              <th className="table_high">Status</th>
+              <th className="table_high" >Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -149,7 +150,7 @@ const CrudTable = () => {
       </form>
 
       
-      <form onSubmit={handleAddFormSubmit}>
+      <form  className="myForm"  onSubmit={handleAddFormSubmit}>
         <input
           type="text"
           name="author"
@@ -181,6 +182,7 @@ const CrudTable = () => {
         <button type="submit">Add</button>
       </form>
     </div>
+    </section>
   );
 };
 
