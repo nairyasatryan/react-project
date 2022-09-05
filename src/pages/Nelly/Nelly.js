@@ -2,8 +2,8 @@ import React, { useState, Fragment } from 'react'
 import { nanoid } from "nanoid"
 import "./Nelly.css"
 import data from "./nelly-data.json"
-import ReadOnlyRow from './Components/ReadOnlyRow'
-import EditableRow from './Components/EditableRow'
+import ReadOnlyRow from './components/ReadOnlyRow'
+import EditableRow from './components/EditableRow'
 
 export default function Nelly() {
   const [contacts, setContacts] = useState(data)
