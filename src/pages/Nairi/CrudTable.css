@@ -6,11 +6,15 @@
 	flex-direction: column;
 	gap: 10px;
 	padding: 1rem;
+
 }
 
 .app-container table {
 	border-collapse: collapse;
 	width: 100%;
+}
+.app-container input {
+	width: 98%;
 }
 
 .app-container th,
