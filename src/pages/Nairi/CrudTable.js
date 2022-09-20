@@ -119,12 +119,12 @@ const CrudTable = () => {
       <form onSubmit={handleEditFormSubmit}>
         <table className="table">
           <thead>
-            <tr className="table_row">
-              <th className="table_high">Author</th>
-              <th className="table_high">Title</th>
-              <th className="table_high">Languagr</th>
-              <th className="table_high">Status</th>
-              <th className="table_high" >Actions</th>
+            <tr>
+              <th >Author</th>
+              <th >Title</th>
+              <th >Languagr</th>
+              <th >Status</th>
+              <th  >Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -150,7 +150,7 @@ const CrudTable = () => {
       </form>
 
       
-      <form  className="myForm"  onSubmit={handleAddFormSubmit}>
+      <form    onSubmit={handleAddFormSubmit}>
         <input
           type="text"
           name="author"

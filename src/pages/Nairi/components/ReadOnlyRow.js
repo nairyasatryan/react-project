@@ -3,11 +3,11 @@ import React from "react";
 const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
   return (
     <tr>
-      <td className="myTd">{contact.author}</td>
-      <td className="myTd">{contact.title}</td>
-      <td className="myTd">{contact.language}</td>
-      <td className="myTd">{contact.status}</td>
-      <td className="myTd">
+      <td>{contact.author}</td>
+      <td>{contact.title}</td>
+      <td>{contact.language}</td>
+      <td>{contact.status}</td>
+      <td>
         <button
           type="button"
           onClick={(event) => handleEditClick(event, contact)}
