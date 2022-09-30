@@ -1,21 +1,27 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import { nanoid } from "nanoid";
 import "./CrudTable.css";
-import data from './mock-data.json'
 import ReadOnlyRow from "./components/ReadOnlyRow";
 import EditableRow from "./components/EditableRow";
 
+
 const CrudTable = () => {
 
+  useEffect(() => {
+    fetch(`http://localhost:5000/books`)
+     .then((response) => response.json())
+     .then(bookData => setContacts(bookData))
+   }, []);
 
-    const [contacts, setContacts] = useState(data);
+
+  const [contacts, setContacts] = useState([]);
   const [addFormData, setAddFormData] = useState({
     author: "",
     title: "",
     language: "",
     status: "",
   });
-
+   
   const [editFormData, setEditFormData] = useState({
     author: "",
     title: "",
@@ -115,76 +121,74 @@ const CrudTable = () => {
 
   return (
     <section className="my_body">
-    <div className="app-container">
-      <form onSubmit={handleEditFormSubmit}>
-        <table className="table">
-          <thead>
-            <tr>
-              <th >Author</th>
-              <th >Title</th>
-              <th >Languagr</th>
-              <th >Status</th>
-              <th  >Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {contacts.map((contact) => (
-              <Fragment>
-                {editContactId === contact.id ? (
-                  <EditableRow
-                    editFormData={editFormData}
-                    handleEditFormChange={handleEditFormChange}
-                    handleCancelClick={handleCancelClick}
-                  />
-                ) : (
-                  <ReadOnlyRow
-                    contact={contact}
-                    handleEditClick={handleEditClick}
-                    handleDeleteClick={handleDeleteClick}
-                  />
-                )}
-              </Fragment>
-            ))}
-          </tbody>
-        </table>
-      </form>
+      <div className="app-container">
+        <form onSubmit={handleEditFormSubmit}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>Author</th>
+                <th>Title</th>
+                <th>Language</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {contacts.map((contact) => (
+                <Fragment>
+                  {editContactId === contact.id ? (
+                    <EditableRow
+                      editFormData={editFormData}
+                      handleEditFormChange={handleEditFormChange}
+                      handleCancelClick={handleCancelClick}
+                    />
+                  ) : (
+                    <ReadOnlyRow
+                      contact={contact}
+                      handleEditClick={handleEditClick}
+                      handleDeleteClick={handleDeleteClick}
+                    />
+                  )}
+                </Fragment>
+              ))}
+            </tbody>
+          </table>
+        </form>
 
-      
-      <form    onSubmit={handleAddFormSubmit}>
-        <input
-          type="text"
-          name="author"
-          required="required"
-          placeholder="Enter an author..."
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="text"
-          name="title"
-          required="required"
-          placeholder="Enter a title..."
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="text"
-          name="language"
-          required="required"
-          placeholder="Enter a language..."
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="text"
-          name="status"
-          required="required"
-          placeholder="Enter a status..."
-          onChange={handleAddFormChange}
-        />
-        <button type="submit">Add</button>
-      </form>
-    </div>
+        <form onSubmit={handleAddFormSubmit}>
+          <input
+            type="text"
+            name="author"
+            required="required"
+            placeholder="Enter an author..."
+            onChange={handleAddFormChange}
+          />
+          <input
+            type="text"
+            name="title"
+            required="required"
+            placeholder="Enter a title..."
+            onChange={handleAddFormChange}
+          />
+          <input
+            type="text"
+            name="language"
+            required="required"
+            placeholder="Enter a language..."
+            onChange={handleAddFormChange}
+          />
+          <input
+            type="text"
+            name="status"
+            required="required"
+            placeholder="Enter a status..."
+            onChange={handleAddFormChange}
+          />
+          <button type="submit">Add</button>
+        </form>
+      </div>
     </section>
   );
 };
 
-
-export default CrudTable
+export default CrudTable;
